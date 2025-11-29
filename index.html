@@ -4,251 +4,193 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>MeshPay.Creditcard – Network-of-Networks & Smart Routing</title>
-  <meta name="description"
-        content="MeshPay.creditcard explains how modern payment systems route transactions across multiple networks, providers and rails – creating a mesh of cards, wallets, APMs and banks." />
+  <title>MeshPay.Creditcard – Peer-to-Peer & Mesh Network Payment Models Explained</title>
+  <meta name="description" content="Learn how mesh networks, peer-to-peer wallets and decentralized payment routing could integrate with credit-card infrastructure. Independent explainer of mesh-based payment flows." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://meshpay.creditcard/" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="MeshPay.Creditcard – Network-of-Networks & Smart Routing" />
-  <meta property="og:description"
-        content="From cards and wallets to APMs and bank rails – how mesh-style routing finds the best path for each payment." />
+  <meta property="og:title" content="MeshPay.Creditcard – Mesh & Peer-to-Peer Payment Models" />
+  <meta property="og:description" content="Understand how mesh-based wallets, local channels or peer payments might interact with traditional card rails, conversion layers and settlement processes." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://meshpay.creditcard/" />
-  <meta property="og:image" content="https://meshpay.creditcard/preview.png" />
+  <meta property="og:image" content="https://choose.creditcard/preview.png?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=og_image" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="/styles.css" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MeshPay.Creditcard – Mesh & Peer Payment Concepts" />
+  <meta name="twitter:description" content="Independent explanation of peer-to-peer and mesh-network payment models and how they could work alongside card networks." />
+  <meta name="twitter:image" content="https://choose.creditcard/preview.png?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=twitter_image" />
 
   <!-- GA4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-64FE63JQ3H"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config','G-64FE63JQ3H');
+    gtag('config', 'G-64FE63JQ3H');
   </script>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-
 <body class="bg-slate-950 text-slate-100">
-
-  <!-- HEADER – unified CC -->
   <header class="site-header">
     <div class="nav-inner max-w-6xl">
       <div class="brand">
         <div class="cc-logo">CC</div>
         <div class="brand-text">
-          <span class="brand-title">MeshPay.creditcard</span>
-          <span class="brand-subtitle">Routing · Multi-rail · Network-of-networks</span>
+          <div class="brand-title">MeshPay.Creditcard</div>
+          <div class="brand-subtitle">Peer-to-Peer & Mesh Payment Models</div>
         </div>
       </div>
-
       <nav class="nav-links">
-        <a href="https://fin.creditcard/?utm_source=meshpay.creditcard&utm_medium=nav&utm_campaign=collection">
-          Collection
-        </a>
-        <a href="https://tech.creditcard/?utm_source=meshpay.creditcard&utm_medium=nav&utm_campaign=tech">
-          Tech
-        </a>
-        <a href="https://chainpay.creditcard/?utm_source=meshpay.creditcard&utm_medium=nav&utm_campaign=chainpay">
-          ChainPay
-        </a>
-        <a href="https://choose.creditcard/?utm_source=meshpay.creditcard&utm_medium=nav&utm_campaign=choose">
-          Choose
-        </a>
+        <a href="#overview">Overview</a>
+        <a href="#mechanics">How It Works</a>
+        <a href="#compare">Compare</a>
       </nav>
     </div>
   </header>
 
   <main class="cc-page">
-
-    <p class="cc-breadcrumb">MeshPay.creditcard · Routing · Multi-rail · Network-of-networks</p>
-
-    <!-- HERO -->
-    <section class="hero">
-      <h1>Mesh Payments & Smart Routing</h1>
-      <p class="hero-lead">
-        How modern payment stacks route each transaction across a mesh of card networks, wallets,
-        alternative payment methods and bank rails.
-      </p>
-      <a class="cta"
-         href="https://choose.creditcard/?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=meshpay_top">
-        Compare Multi-Rail & FX-Friendly Cards
+    <div class="cc-breadcrumb">
+      <a href="https://choose.creditcard/?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=breadcrumb">
+        Home
       </a>
-    </section>
+      &nbsp;›&nbsp;
+      MeshPay.Creditcard
+    </div>
 
-    <!-- What is MeshPay -->
-    <section class="section">
-      <h2>What is “MeshPay” in card terms?</h2>
-      <p class="small">
-        MeshPay is a way of thinking about payments as a network-of-networks. Instead of one fixed route
-        (card → network → bank), the stack can choose between multiple rails, providers and flows for each
-        transaction – optimising for cost, speed, reliability or region.
-      </p>
-      <ul class="list">
-        <li>Multiple acquirers and processors behind the scenes</li>
-        <li>Card, wallet, APMs and bank transfers in one orchestration layer</li>
-        <li>Smart routing based on region, amount, MCC, risk and cost</li>
-        <li>Failover paths if one network, PSP or rail is down</li>
-      </ul>
-    </section>
-
-    <!-- Mesh layers -->
-    <section class="section">
-      <h2>The MeshPay decision layers</h2>
-      <div class="cluster-grid">
-        <div class="cluster-card">
-          <h3>Checkout &amp; UX</h3>
-          <p class="small">
-            Which methods to show: card, wallet, BNPL, A2A, local methods – based on user, device and region.
-          </p>
-        </div>
-        <div class="cluster-card">
-          <h3>Provider selection</h3>
-          <p class="small">
-            Pick the best PSP/acquirer for this merchant, country, currency and risk profile.
-          </p>
-        </div>
-        <div class="cluster-card">
-          <h3>Rail routing</h3>
-          <p class="small">
-            Decide whether to send via card networks, instant bank rails, local schemes or wallets.
-          </p>
-        </div>
-        <div class="cluster-card">
-          <h3>Risk &amp; compliance</h3>
-          <p class="small">
-            Layer fraud checks, 3DS/SCA decisions and compliance on top of routing logic.
-          </p>
-        </div>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Could Mesh Networks and Peer-to-Peer Systems Power Card Payments?</h1>
+        <p class="hero-lead">
+          MeshPay.Creditcard explores how decentralized wallets, peer-to-peer channels and mesh-network payment paths might interface
+          with traditional card systems — bridging local, global, crypto and fiat rails in novel ways.
+        </p>
+        <a class="cta"
+           href="https://choose.creditcard/?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=hero_cta">
+          Visit the main Comparison hub
+        </a>
       </div>
     </section>
 
-    <!-- Table: Mesh vs single-rail -->
+    <section id="overview" class="section">
+      <h2>What Is a Mesh Payment Model?</h2>
+      <p>
+        A mesh payment model refers to a network where transactions can be routed peer-to-peer, possibly outside centralized intermediaries — using local channels, off-chain data, wallets or even ad-hoc network overlays. The idea is that payments are not tied strictly to banks or card schemes, but can move flexibly between nodes.
+      </p>
+      <p>
+        For cardholders, this could mean linking a mesh-wallet or peer-to-peer balance to a card, enabling spending without a traditional bank account. Alternatively, mesh-enabled wallets might top up fiat balances behind the scenes while preserving privacy and decentralisation benefits.
+      </p>
+    </section>
+
+    <section id="mechanics" class="section">
+      <h2>How Mesh-to-Card Payment Bridges Might Work</h2>
+      <p>
+        When you initiate a payment from a mesh wallet, a bridge service might convert or route value into fiat and then trigger a standard card authorisation on your behalf — masking the mesh origin from the merchant. This requires a backend that monitors wallet balances, executes conversion or settlement, and issues the card transaction.
+      </p>
+      <p>
+        Some models might use stablecoins, off-chain ledgers or pooled liquidity to smooth volatility and liquidity constraints. At settlement time, the bridge ensures the card network receives fiat funds, even if the original value originated in a decentralized wallet.
+      </p>
+    </section>
+
     <section class="section">
-      <h2>Mesh-style routing vs single-rail setups</h2>
+      <h2>Potential Benefits and Trade-offs</h2>
+      <p>
+        **Benefits** include increased financial inclusion (for unbanked users), enhanced privacy, flexible routing and access to global liquidity. A mesh model could also reduce dependency on single point-of-failure intermediaries and offer programmable payment logic.
+      </p>
+      <p>
+        **Trade-offs** may involve increased complexity, bridging costs, regulatory uncertainty, KYC/AML compliance challenges and potential delays when converting or routing funds. The experience might also resemble a hybrid between a crypto card and a traditional payment — with associated volatility and risk.
+      </p>
+    </section>
+
+    <section id="compare" class="section">
+      <h2>Comparing MeshPay Models and Traditional Card Programmes</h2>
       <div class="table-wrap">
         <table class="table">
           <thead>
-          <tr>
-            <th>Aspect</th>
-            <th>Single-rail</th>
-            <th>Mesh-style</th>
-          </tr>
+            <tr>
+              <th>Feature / Approach</th>
+              <th>What to Evaluate</th>
+              <th>Why It Matters</th>
+            </tr>
           </thead>
           <tbody>
-          <tr>
-            <td>Networks</td>
-            <td>One main card network or PSP.</td>
-            <td>Multiple networks, PSPs and local methods available.</td>
-          </tr>
-          <tr>
-            <td>Resilience</td>
-            <td>Outage = downtime.</td>
-            <td>Failover path to other acquirers or rails.</td>
-          </tr>
-          <tr>
-            <td>Costs</td>
-            <td>Limited leverage on pricing.</td>
-            <td>Route to cheapest or best-performing path per segment.</td>
-          </tr>
-          <tr>
-            <td>Optimisation</td>
-            <td>Static configuration.</td>
-            <td>Dynamic rules and ML-based optimisation over time.</td>
-          </tr>
-          <tr>
-            <td>Coverage</td>
-            <td>Good in core markets only.</td>
-            <td>Fine-tuned for specific regions and local payment types.</td>
-          </tr>
+            <tr>
+              <td>Wallet / Channel Coverage</td>
+              <td>Supported networks, liquidity & on-ramp/off-ramp options</td>
+              <td>Determines whether the model can actually provide enough liquidity when spending.</td>
+            </tr>
+            <tr>
+              <td>Bridge & Settlement Mechanism</td>
+              <td>Fiat pools, stablecoins, conversion latency, transparency</td>
+              <td>Affects reliability, cost and transaction timing.</td>
+            </tr>
+            <tr>
+              <td>Fees & Spreads</td>
+              <td>Bridge fees, conversion costs, card fees, FX costs</td>
+              <td>Critical for cost-effectiveness vs. traditional cards.</td>
+            </tr>
+            <tr>
+              <td>Regulatory & Compliance Setup</td>
+              <td>Licensing, AML/KYC, fund safeguarding, legal jurisdiction</td>
+              <td>Determines safety, legitimacy and regulatory risk for users.</td>
+            </tr>
+            <tr>
+              <td>User Experience</td>
+              <td>Speed, stability, clarity, privacy vs. convenience trade-offs</td>
+              <td>Impacts whether everyday payments feel seamless or cumbersome.</td>
+            </tr>
           </tbody>
         </table>
       </div>
-    </section>
-
-    <!-- Why MeshPay matters -->
-    <section class="section">
-      <h2>Why MeshPay matters for merchants & users</h2>
       <p class="small">
-        Users just see “approved” or “declined”, but mesh-style routing can quietly improve outcomes:
+        For full comparisons across card products — conventional, crypto-linked, hybrid or mesh-based — see
+        <a href="https://choose.creditcard/?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=comparison_section">
+          Choose.Creditcard
+        </a>.
       </p>
-      <ul class="list">
-        <li>Higher approval rates by choosing the best route for each issuer/region</li>
-        <li>Better UX by showing the right methods at checkout, including wallets and APMs</li>
-        <li>Lower processing costs by steering volume towards cheaper rails where possible</li>
-        <li>Less downtime thanks to automated failover between providers</li>
-        <li>More flexibility to plug in new rails (instant bank pay, local schemes, wallets)</li>
-      </ul>
     </section>
 
-    <!-- Mesh + crypto/DeFi -->
     <section class="section">
-      <h2>MeshPay with crypto &amp; DeFi in the mix</h2>
+      <h2>Where MeshPay Fits in The CreditCard Collection</h2>
       <p class="small">
-        In more advanced stacks, crypto and DeFi act as additional value layers behind traditional rails:
+        MeshPay.Creditcard is part of <strong>The CreditCard Collection</strong> — a network of microsites operated by ronarn AS. Each domain describes one specific payment paradigm, giving readers clarity before guiding them to comparison tools.
       </p>
-      <ul class="list">
-        <li>Stablecoins and DeFi wallets funding card, wallet or APM options</li>
-        <li>On/off-ramp providers acting as extra nodes in the mesh</li>
-        <li>Token-based loyalty or cashback layered on top of card transactions</li>
-        <li>Dynamic choice between on-chain and off-chain rails for specific corridors</li>
-      </ul>
-    </section>
+      <p class="small">
+        This page explores a less conventional, more speculative payment architecture — mesh and peer-to-peer routing — without endorsing any particular implementation.
+      </p>
+      <p class="small">
+        Content here is informational only. Real mesh-to-card solutions involve technical, regulatory and risk challenges. Always evaluate provider terms, stability and compliance before using any such product.
+      </p>
 
-    <!-- Cluster links -->
-    <section class="section">
-      <h2>The Mesh &amp; rails domain cluster</h2>
-      <p class="small">Explore related domains in The CreditCard Collection:</p>
-      <div class="cluster-grid">
-        <a class="cluster-card"
-           href="https://chainpay.creditcard/?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=chainpay">
-          <h3>ChainPay.creditcard</h3>
-          <p class="small">End-to-end view of payment chains and value flows.</p>
-        </a>
-        <a class="cluster-card"
-           href="https://cryptopay.creditcard/?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=cryptopay">
-          <h3>CryptoPay.creditcard</h3>
-          <p class="small">How crypto and stablecoins route onto card rails.</p>
-        </a>
-        <a class="cluster-card"
-           href="https://defipay.creditcard/?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=defipay">
-          <h3>DefiPay.creditcard</h3>
-          <p class="small">Using DeFi balances to power everyday payments.</p>
-        </a>
-        <a class="cluster-card"
-           href="https://tech.creditcard/?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=tech">
-          <h3>Tech.Creditcard</h3>
-          <p class="small">Technical deep dives into routing, risk and rails.</p>
+      <div class="hub-link">
+        <a href="https://choose.creditcard/?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=minisite_to_hub"
+           class="text-sm text-slate-600 hover:text-slate-900">
+          Learn more at the Comparison hub
         </a>
       </div>
     </section>
 
-    <!-- CTA bottom -->
     <section class="section">
-      <h2>Finding cards that thrive in a mesh world</h2>
+      <h2>Want to Explore More Payment Models?</h2>
       <p class="small">
-        MeshPay.creditcard explains the routing logic behind modern payments.<br />
-        To compare concrete card products, FX policies, rewards and wallet support:
+        Use MeshPay.Creditcard as a conceptual reference. Then visit the main hub to compare conventional, crypto-based, virtual, mesh-like and hybrid card products — all side by side.
       </p>
       <a class="cta"
-         href="https://choose.creditcard/?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=meshpay_bottom">
-        Open Compare on Choose.Creditcard
+         href="https://choose.creditcard/?utm_source=meshpay.creditcard&utm_medium=referral&utm_campaign=bottom_cta">
+        Go to Choose.Creditcard
       </a>
     </section>
-
   </main>
 
-  <!-- MINI FOOTER -->
   <footer class="mini-footer">
-    <p class="mini-footer-main">
-      © 2025 The CreditCard Collection — ronarn AS
-    </p>
+    <p class="mini-footer-main">© 2025 The CreditCard Collection — ronarn AS</p>
     <p class="mini-footer-contact">
       Contact: <a href="mailto:support@cc.creditcard">support@cc.creditcard</a>
     </p>
   </footer>
-
 </body>
 </html>
